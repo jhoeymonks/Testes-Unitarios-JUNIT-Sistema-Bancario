@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Relatório de Teste de Qualidade - GerenciadoraClientesTest_TestPesquisaCliente_TestRemoveCliente</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: hsl(0, 0%, 100%);
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h2 {
+      margin-top: 40px;
+   
+   
+    }
+    ol {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Relatório de Teste de Qualidade - Funções TestPesquisaCliente e TestRemoveCliente do Sistema Bancario</h1>
+
+<h3>Data: 24/05/2024</h3>
+
+<h3>Autor: Jhoey Monks</h3>
+
+<h3>Cenários de teste:</h3>
+
+<p><strong>Objetivo Principal: Verificar se as funções isoladas de pesquisar um cliente e remover um cliente em um Sistema Bancario escrito em Java estão funcionando corretamente utilizando JUnit</strong> </p>
+
+<h3>1. testPesquisaCliente</h3>
+
+<p><strong>Objetivo:</strong> Verificar se as função <code>pesquisaCliente</code> retorna o cliente correto com base no ID informado e se a idade do cliente está sendo validada corretamente durante a pesquisa.</p>
+
+<ol>
+  <li>Criar dois clientes (<code>cliente01</code> e <code>cliente02</code>) com IDs distintos.</li>
+  <li>Adicionar os clientes à lista <code>clientesDoBanco</code>.</li>
+  <li>Instanciar a classe <code>GerenciadoraClientes</code> com a lista <code>clientesDoBanco</code>.</li>
+  <li>Executar a função <code>pesquisaCliente</code> com o ID <code>1</code>.</li>
+  <li>Verificar se o cliente retornado possui o ID <code>1</code> utilizando a asserção <code>assertThat(cliente.getId(), is(1))</code>.</li>
+  <li>Verificar se o cliente retornado possui o email correto utilizando a asserção <code>assertThat(cliente.getEmail(), is("jhoeymonks@gmail.com"))</code>.</li>
+  <li>Verificar se o cliente retornado possui o nome correto utilizando a asserção <code>assertThat(cliente.getNome(), is("Jhoey David"))</code>.</li>
+  <li>Verificar se o cliente retornado possui a idade correta utilizando a asserção <code>assertThat(cliente.getIdade(), is (20))</code>.</li>
+</ol>
+
+<p><strong>Resultado:</strong> O teste foi parcialmente aprovado. A função <code>pesquisaCliente</code> retornou o cliente correto com o ID <code>1</code> e o email correto, mas a validação da idade falhou, pois a idade do cliente retornado (<code>34</code>) é diferente da idade esperada (<code>20</code>).</p>
+
+<h3>2. testRemoveCliente</h3>
+
+<p><strong>Objetivo:</strong> Verificar se a função <code>removeCliente</code> remove o cliente correto da lista e se a lista é atualizada corretamente.</p>
+
+<ol>
+  <li>Criar dois clientes (<code>cliente01</code> e <code>cliente02</code>) com IDs distintos.</li>
+  <li>Adicionar os clientes à lista <code>clientesDoBanco</code>.</li>
+  <li>Instanciar a classe <code>GerenciadoraClientes</code> com a lista <code>clientesDoBanco</code>.</li>
+  <li>Executar a função <code>removeCliente</code> com o ID <code>2</code>.</li>
+  <li>Verificar se o cliente foi removido com sucesso utilizando a asserção <code>assertThat(clienteRemovido, is(true))</code>.</li>
+  <li>Verificar se o tamanho da lista <code>clientesDoBanco</code> foi reduzido para <code>1</code> utilizando a asserção <code>assertThat(gerClientes.getClientesDoBanco().size(), is(1))</code>.</li>
+  <li>Verificar se o cliente com ID <code>2</code> não existe mais na lista utilizando a asserção <code>assertNull(gerClientes.pesquisaCliente(2))</code>.</li>
+</ol>
+
+<p><strong>Resultado:</strong> O teste foi executado com sucesso. A função <code>removeCliente</code> removeu o cliente correto da lista e a lista foi atualizada corretamente.</p>
+
+<h2>Conclusão:</h2>
+
+Os testes unitários para a função <code>removeCliente</code> da classe <code>GerenciadoraClientes</code> foram executados com sucesso. No entanto, a função <code>pesquisaCliente</code>, apesar de retornar o cliente correto, apresenta falha na validação da idade. 
+
+<h5>Testes realizados como matéria de estudo do curso: Testes Automáticos + Curso COMPLETO de Teste de Software - Udemy - Gustavo Farias
+</h5>
+
+</body>
+</html>
