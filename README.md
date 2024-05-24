@@ -14,6 +14,10 @@
 **Resultados:**
 
 * **TestPesquisaCliente:** O teste foi parcialmente aprovado. A função retornou o cliente correto, mas a validação da idade falhou.
+*Resultado do teste:
+
+![Resultado do Teste](/jhoeymonks/Testes-Unitarios-JUNIT-Sistema-Bancario/blob/master/resultado_Teste.png)
+
 * **TestRemoveCliente:** O teste foi executado com sucesso. A função removeu o cliente corretamente e a lista foi atualizada com sucesso.
 
 **Detalhes Adicionais:**
