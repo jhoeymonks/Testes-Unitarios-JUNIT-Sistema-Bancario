@@ -13,7 +13,10 @@
 
 **Resultados:**
 
-* **TestPesquisaCliente:** O teste foi parcialmente aprovado. A função retornou o cliente correto, mas a validação da idade falhou.
+* **TestPesquisaCliente:** O teste foi parcialmente aprovado. A função retornou o cliente correto, mas a validação da idade falhou. <br>
+
+![Screenshot do Resultado do Teste](resultado_Teste.png) 
+
 * **TestRemoveCliente:** O teste foi executado com sucesso. A função removeu o cliente corretamente e a lista foi atualizada com sucesso.
 
 **Detalhes Adicionais:**
